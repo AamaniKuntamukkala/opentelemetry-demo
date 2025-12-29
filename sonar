@@ -1,6 +1,9 @@
 sudo docker run -d --name sonarqube -p 9000:9000 sonarqube:lts
 sudo groupadd docker        # may say "group already exists"
 sudo usermod -aG docker $USER
+sudo apt update
+sudo apt install postgresql postgresql-contrib -y
+
 sudo systemctl status postgresql
 sudo -u postgres psql
 CREATE DATABASE sonarqube;
